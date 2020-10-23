@@ -1,4 +1,5 @@
 # Automatic Mask Dispenser(AMD)
+* 창의ICT공학설계입문(2019-1) Project
 ## Features
 * Using Arduino Uno + NodeMCU
 * Detect a person with ultrasonic sensor
