@@ -5,10 +5,10 @@
 #include <BlynkSimpleEsp8266.h>
 #include <ArduinoJson.h>
 
-char auth[] = "ubm3eNRDCjub7Unp9IMdrQ9-z00DDD0U";
+char auth[] = "Blynk Auth Token";
 
-char ssid[] = "AndroidHotspot7041";
-char password[] = "qwertypoiu";
+char ssid[] = "WIFI SSID";
+char password[] = "WIFI PW";
 
 int pm10, pm25, pm10_criterion, pm25_criterion, Warning;
 
@@ -23,7 +23,7 @@ void setup()
 	if (WiFi.status() == WL_CONNECTED) {
 		HTTPClient http;
 
-		http.begin("http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=%EB%8F%99%EC%9E%91%EB%8C%80%EB%A1%9C%20%EC%A4%91%EC%95%99%EC%B0%A8%EB%A1%9C&dataTerm=month&pageNo=1&numOfRows=1&ServiceKey=4g%2FQsjG%2BjAp26ymrwrMdErLeiw42c3rZqG5LmNPY3WPCTqoPnFX9P%2Bbq1Lh6GeerIqpg0omW7DZRsIb3hRmKsQ%3D%3D&ver=1.3&_returnType=json");
+		http.begin("http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=%EB%8F%99%EC%9E%91%EB%8C%80%EB%A1%9C%20%EC%A4%91%EC%95%99%EC%B0%A8%EB%A1%9C&dataTerm=month&pageNo=1&numOfRows=1&ServiceKey=[OpenAPI Service Key]&ver=1.3&_returnType=json");
 		int httpcode = http.GET();
 
 		if (httpcode > 0) {
